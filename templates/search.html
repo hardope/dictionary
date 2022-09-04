@@ -2,8 +2,8 @@
 
 <html lang="en">
     <head>
+     <h1 style="text-align: center;">Dictionary</h1>
      <link href="/static/styles.css" rel="stylesheet">
-     <h1 style="text-align: center;" class="section">Dictionary</h1>
      <meta charset="utf-8">
      <meta name="viewport" content="initial-scale=1, width=device-width">
      <link href="/static/favicon.ico" rel="icon">
@@ -15,19 +15,12 @@
         </title>
     </head>
     <body>
-          <h3 class="section">Word: </h3 class="section">
-          <p class="section">{{ random_word[1] }}</p>
-          <h3 class="section">Type: </h3 class="section">
-          <p class="section">{{ random_word[2] }}</p>
-          <h3 class="section">Definition: </h3 class="section">
-          <p class="section">{{ random_word[4] }}</p>
-        <form action="/search" class="section">
-            <center><button class="btn btn-outline-primary" type="submit">SEARCH</button></center>
-        </form>
-          <h3 class="section" style="text-align: center;">Discover Random Words</h3 class="section">
-          <form action="/" class="section">
-              <center><button class="btn btn-outline-primary" type="submit">Discover</button></center>
+          <form action="/search" method="post">
+               <center><input class="form-control mx-auto w-auto" name="search" id="search" type="text" placeholder="Word" autocomplete="off" autofocus class="section"></center>
+               <center><button class="btn btn-outline-primary" type="submit" class="section">Submit</button></center>
           </form>
-
+              <form action="/" class="section">
+                  <center><button class="btn btn-outline-primary" type="submit">HOME</button></center>
+              </form>
     </body>
 </html>
