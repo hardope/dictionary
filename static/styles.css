@@ -1,3 +1,8 @@
 .section {
      padding: 0.5rem 2rem 0.5rem 2rem;
 }
+form, table {
+     display:inline;
+     margin:0px;
+     padding:0px;
+}
