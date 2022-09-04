@@ -23,7 +23,7 @@ def search():
           conn = sqlite3.connect("advancedict.db")
           cursor = conn.cursor()
           search = request.form.get('search')
-          found = cursor.execute(f"SELECT * FROM words where word LIKE '{search}%'")
+          found = cursor.execute(f"SELECT * FROM words where word LIKE '{search}%' LIMIT 100")
           return render_template("found.html", found=found)
      return render_template("search.html")
 
@@ -44,3 +44,4 @@ def word(query):
           word1 = word_list[0]
           word2 = word_list[1]
      return render_template('word.html', word=word1, second=word2)
+
