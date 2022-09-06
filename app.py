@@ -1,6 +1,6 @@
 #from operation import *
 import sqlite3
-from flask import Flask, flash, redirect, render_template, request
+from flask import Flask, flash, redirect, render_template, request, jsonify
 import random
 
 conn = sqlite3.connect("advancedict.db")
@@ -19,7 +19,7 @@ def index():
 
 @app.route("/search", methods=['post', 'get'])
 def search():
-     if request.method == 'POST':
+     if request.method == "POST":
           conn = sqlite3.connect("advancedict.db")
           cursor = conn.cursor()
           search = request.form.get('search')
@@ -44,4 +44,11 @@ def word(query):
           word1 = word_list[0]
           word2 = word_list[1]
      return render_template('word.html', word=word1, second=word2)
+
+@app.route("/api/<query>")
+def api(query):
+     selected_words = []
+     for i in range(10):
+          selected_words.append(words[i+int(query)])
+     return jsonify({"selected_words": selected_words})
 
