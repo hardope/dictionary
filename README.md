@@ -5,4 +5,4 @@ words, with the word types and definition.<br>
 Also it has a function that displayes a randomly selected word on the index page by default.
 
 ## Api
-There is an api implementation that that returns twenty dictionary words of provided from the index provided as query in the http request.
+There is an api implementation that that returns twenty dictionary words from an index provided by as query in the http request.
