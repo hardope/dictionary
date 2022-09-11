@@ -3,3 +3,6 @@ This is a dynamic web a application that allows you to search a dictionary of ov
 words, with the word types and definition.<br>
 
 Also it has a function that displayes a randomly selected word on the index page by default.
+
+## Api
+There is an api implementation that that returns twenty dictionary words from an index provided by as query in the http request.
