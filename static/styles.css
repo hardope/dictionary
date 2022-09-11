@@ -6,3 +6,12 @@ form, table {
      margin:0px;
      padding:0px;
 }
+.sidebar {
+     background-color: rgb(227, 227, 227);
+     height: 100vh;
+     padding: 20px;
+ }
+ 
+ .sidebar h2 {
+     margin-top: 5px;
+ }

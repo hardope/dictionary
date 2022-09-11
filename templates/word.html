@@ -1,29 +1,16 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
-<html lang="en">
-    <head>
-     <link href="/static/styles.css" rel="stylesheet">
-     <meta charset="utf-8">
-     <meta name="viewport" content="initial-scale=1, width=device-width">
-     <link href="/static/favicon.ico" rel="icon">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <title>
-            Dictionary
-        </title>
-    </head>
-    <body class="section">
-          <h3 style="text-align: center;">{{word[1]}}</h3>
-          <h4>{{ word[2] }}</h4>
-          <p>{{ word[4] }}</p>
+<link href="/static/styles.css" rel="stylesheet">
 
-          <h4>{{ second[2] }}</h4>
-          <p>{{ second[4] }}</p>
+{% block body %}
 
-          <a href="https://en.wiktionary.org/wiki/{{word[1]}}">More on Wikipedia</a>
-          <form action="/" class="section">
-               <center><button class="btn btn-outline-primary" type="submit">HOME</button></center>
-          </form>
-    </body>
-</html>
+    <h3 style="text-align: center;">{{word[1]}}</h3>
+    <h4>{{ word[2] }}</h4>
+    <p>{{ word[4] }}</p>
+
+    <h4>{{ second[2] }}</h4>
+    <p>{{ second[4] }}</p>
+
+    <a href="https://en.wiktionary.org/wiki/{{word[1]}}">More on Wikipedia</a>
+
+{% endblock %}
