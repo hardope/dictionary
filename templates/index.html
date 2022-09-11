@@ -21,8 +21,9 @@
           <p class="section">{{ random_word[2] }}</p>
           <h3 class="section">Definition: </h3 class="section">
           <p class="section">{{ random_word[4] }}</p>
-        <form action="/search" class="section">
-            <center><button class="btn btn-outline-primary" type="submit">SEARCH</button></center>
+        <form action="/search" method="post">
+            <center><input class="form-control mx-auto w-auto" name="search" id="search" type="text" placeholder="Word" autocomplete="off" autofocus class="section"></center>
+            <div class="section"><center><button class="btn btn-outline-primary" type="submit" class="section">Submit</button></center></div>
         </form>
           <h3 class="section" style="text-align: center;">Discover Random Words</h3 class="section">
           <form action="/" class="section">
