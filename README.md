@@ -6,3 +6,8 @@ Also it has a function that displayes a randomly selected word on the index page
 
 ## Api
 There is an api implementation that that returns twenty dictionary words from an index provided by as query in the http request.
+
+## Installation
+* Clone repository
+* In Directory Run: 'pip install requirements.txt'
+* Run: 'flask run'

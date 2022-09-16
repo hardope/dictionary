@@ -1,4 +1,3 @@
-#from operation import *
 import sqlite3
 from flask import Flask, flash, redirect, render_template, request, jsonify
 import random
@@ -52,3 +51,25 @@ def api(query):
           selected_words.append(words[i+int(query)])
      return jsonify({"selected_words": selected_words})
 
+@app.route("/autocorrect", methods=['post', 'get'])
+def autocorrect():
+     conn = sqlite3.connect("advancedict.db")
+     cursor = conn.cursor()
+     cursor.execute(f"SELECT word FROM words")
+     cwords = cursor.fetchall()
+     if request.method == "POST":
+          text = request.form.get('text').lstrip()
+          split_text = text.split()
+          for i in split_text:
+               if i not in cwords:
+                    try:
+                         i = cursor.execute(f"SELECT word FROM words WHERE word LIKE '%{i[len(i)//2:]}' LIMIT 1")[0]
+                         i = cursor.execute(f"SELECT word FROM words WHERE word LIKE '%{i[:len(i)//2]}' LIMIT 1")[0]
+                         print(i[len(i)/2:len(i)])
+                         print(i[0:len(i)/2])
+                    except:
+                         pass
+          print(split_text)
+          return redirect("/")
+     else:
+          return render_template("autocorrect.html")

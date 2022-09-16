@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+<link href="/static/styles.css" rel="stylesheet">
+
+{% block body %}
+    <h1 style="text-align: center;">Dictionary</h1>
+
+    <form action="/autocorrect" method="post">
+          <label>Text</label>
+          <p><label>Text</label></p>
+          <textarea name="text" id="text" style="align-self: center;">
+          </textarea>
+          <input type="submit" placeholder="Correct">
+    </form>
+
+{% endblock %}
