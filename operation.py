@@ -28,4 +28,3 @@ def list_words(query):
           return words_list
      except:
           return "Invalid Query."
-          
