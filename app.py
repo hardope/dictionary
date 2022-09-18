@@ -1,6 +1,7 @@
 import sqlite3
 from flask import Flask, flash, redirect, render_template, request, jsonify
 import random
+from operation import *
 
 conn = sqlite3.connect("advancedict.db")
 cursor = conn.cursor()
@@ -10,27 +11,21 @@ words = cursor.fetchall()
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-     a = random.randint(0, 110000)
-     random_word = words[a]
-
+def main():
+     random_word = get_random()
      return render_template("index.html", random_word=random_word)
 
 @app.route("/search", methods=['post', 'get'])
 def search():
      if request.method == "POST":
-          conn = sqlite3.connect("advancedict.db")
-          cursor = conn.cursor()
           search = request.form.get('search')
-          found = cursor.execute(f"SELECT * FROM words where word LIKE '{search}%' LIMIT 100")
+          found = find_word(search)
           return render_template("found.html", found=found)
      return render_template("search.html")
 
 @app.route("/word/<query>")
 def word(query):
-     conn = sqlite3.connect("advancedict.db")
-     cursor = conn.cursor()
-     found_word = cursor.execute(f"SELECT * FROM words WHERE word == '{query}'")
+     found_word = select_word(query)
      a = 0
      word_list = []
      word2 = ""
@@ -46,7 +41,5 @@ def word(query):
 
 @app.route("/api/<query>")
 def api(query):
-     selected_words = []
-     for i in range(10):
-          selected_words.append(words[i+int(query)])
+     selected_words = list_words(query)
      return jsonify({"selected_words": selected_words})
