@@ -1,6 +1,5 @@
 import sqlite3
 from flask import Flask, flash, redirect, render_template, request, jsonify
-import random
 from operation import *
 import requests
 
