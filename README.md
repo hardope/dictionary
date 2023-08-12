@@ -7,7 +7,7 @@ Access a dictionary with over 100,000 words using rest framework
 
 ---
 
-I'm open to collaborations on this project 😊, if you have an idea to imporove this project, don't hesitate to fork update and create a pull request (frontend or backend)
+I'm open to collaborations on this project 😊, if you have an idea to improve this project, don't hesitate to fork update and create a pull request (frontend or backend)
 
 ---
 
