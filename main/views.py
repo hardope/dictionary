@@ -51,5 +51,9 @@ class RandomWord(APIView):
      )
 
      def get(self, request):
+          res = {}
           word = get_random()
-          return Response(word, status=status.HTTP_200_OK)
+          res["message": "Welcome to my Dictionary API, Here's A random Word"]
+          res["API_DOCS": "mydictionary.pythonanywhere.com/docs/"]
+          res["word"] = word
+          return Response(res, status=status.HTTP_200_OK)
