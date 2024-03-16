@@ -15,9 +15,10 @@ body {
 input {
   width: 90%;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px 10px 10px 10px;
   border: none;
+  margin: 1% 4% 1% 4%;
 }
 
 .word {
@@ -33,9 +34,10 @@ input {
   border-style: none;
 }
 
+
 .header {
   font-size: 50px;
-  font-weight: 3000;
+  font-weight: 200;
 }
   
   /* Styles for screens smaller than 768px (e.g., smartphones) */
