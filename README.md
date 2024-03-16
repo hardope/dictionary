@@ -1,6 +1,6 @@
 # MyDict 
 
-Access a dictionary with over 100,000 words using rest framework
+Access a dictionary with over 100,000 words using Django rest framework
 
 ### Live at: [mydictionary](https://mydictionary.pythonanywhere.com)
 ### Swagger Documentation at: [mydictionary Documentation](https://mydictionary.pythonanywhere.com/docs)
