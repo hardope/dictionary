@@ -27,7 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+CORS = {
+    'default': {
+        'ACCESS_CONTROL_ALLOW_ORIGIN': ['*']
+    }
+}
 # Application definition
 
 INSTALLED_APPS = [
