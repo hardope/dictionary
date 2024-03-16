@@ -1,0 +1,92 @@
+/* Default styles for all screen sizes */
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: brown;
+    border-radius: 10px;
+  }
+  
+  /* Styles for screens smaller than 768px (e.g., smartphones) */
+  @media only screen and (max-width: 767px) {
+    .container {
+      width: 90%;
+      padding: 10px;
+    }
+
+    input {
+      width: 87%;
+      height: 40px;
+      border-radius: 10px;
+      padding: 10px 10px 10px 10px;
+      border: none;
+      margin: 1% 4% 1% 4%;
+    }
+
+    button {
+      width: 40%;
+      height: 40px;
+      border-radius: 10px;
+      padding: 10px 10px 10px 10px;
+      border: none;
+      margin: 10px 0 10px 0;
+    }
+
+    
+  }
+  
+  /* Styles for screens between 768px and 1023px (e.g., tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      width: 80%;
+    }
+
+    input {
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        border: none;
+        margin: 1% 4% 1% 4%;
+      }
+  
+      button {
+        width: 10%;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        border: none;
+        margin: 10px 0 10px 0;
+      }
+  }
+  
+  /* Styles for screens larger than 1024px (e.g., desktops) */
+  @media only screen and (min-width: 1024px) {
+    .container {
+      width: 70%;
+    }
+
+    input {
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        border: none;
+        margin: 1% 4% 1% 4%;
+      }
+  
+      button {
+        width: 10%;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        border: none;
+        margin: 10px 0 10px 0;
+      }
+  }
+  
