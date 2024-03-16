@@ -4,13 +4,39 @@ body {
     margin: 0;
   }
   
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: brown;
-    border-radius: 10px;
-  }
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: brown;
+  border-radius: 10px;
+}
+
+input {
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  border: none;
+}
+
+.word {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  font-size: x-large;
+  margin: 1% 4% 1% 4%;
+  background-color: rgb(184, 184, 184);
+  border-radius: 5px;
+  border-style: none;
+}
+
+.header {
+  font-size: 50px;
+  font-weight: 3000;
+}
   
   /* Styles for screens smaller than 768px (e.g., smartphones) */
   @media only screen and (max-width: 767px) {
@@ -45,15 +71,6 @@ body {
     .container {
       width: 80%;
     }
-
-    input {
-        width: 90%;
-        height: 40px;
-        border-radius: 10px;
-        padding: 10px 10px 10px 10px;
-        border: none;
-        margin: 1% 4% 1% 4%;
-      }
   
       button {
         width: 10%;
@@ -70,15 +87,6 @@ body {
     .container {
       width: 70%;
     }
-
-    input {
-        width: 90%;
-        height: 40px;
-        border-radius: 10px;
-        padding: 10px 10px 10px 10px;
-        border: none;
-        margin: 1% 4% 1% 4%;
-      }
   
       button {
         width: 10%;
