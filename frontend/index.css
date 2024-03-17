@@ -42,6 +42,27 @@ input {
   font-size: 50px;
   font-weight: 200;
 }
+
+#rec {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  font-size: x-large;
+  margin: 1% 4% 1% 4%;
+  background-color: rgb(184, 184, 184);
+  border-radius: 5px;
+  border-style: none;
+  display: none;
+}
+
+#rec div {
+  text-align: left;
+  border-bottom: 1px solid rgb(139, 139, 139);
+  padding: 10px;
+  height: auto;
+}
   
   /* Styles for screens smaller than 768px (e.g., smartphones) */
   @media only screen and (max-width: 767px) {

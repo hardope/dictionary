@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Dictionary</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
@@ -18,10 +18,16 @@
 
 
     <div class="container">
-        <form action="#" method="post">
-            <input type="text" name="word" placeholder="Enter a word">
+        <form onsubmit="search(); return false">
+            <input type="text" name="word" id="search" placeholder="Enter a word">
             <center><button>Search</button></center>
         </form>
     </div>
+
+    <center>
+        <div id="rec">
+            
+        </div>
+    </center>
 </body>
 </html>
